@@ -1,7 +1,6 @@
 ﻿using DataStructures.Lists;
-using DataStructures.Nodes;
 
-namespace app // Note: actual namespace depends on the project name.
+namespace app
 {
     public class Program
     {
@@ -78,71 +77,118 @@ namespace app // Note: actual namespace depends on the project name.
 
 
             // MIDDLE TEST - MIDDLE TEST - MIDDLE TEST - MIDDLE TEST - MIDDLE TEST - MIDDLE TEST
-            IList d = new(1);
-            for (int i = 2; i <= 4; i++)
-            {
-                d.InsertInOrder(i);
-            }
-            d.Display();
-            System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
-            System.Console.WriteLine("d.descending = " + d.descending);
-
-            System.Console.WriteLine();
-            for (int i = 0; i < 1; i++)
-            {
-                d.InsertInOrder((d.FindLast() + 1) * (int)Math.Pow(-1,i));      //THIS CAN BE A TEST FOR MIDDLE.
-                d.Display();
-                System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
-            }
-            d.InsertInOrder(7);
-            d.Display();
-            System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
-
-            System.Console.WriteLine();
-
-            d.Invert();
-            d.Display("inverts.");
-            System.Console.WriteLine("s.GetMiddle() = " + d.GetMiddle());
-            System.Console.WriteLine("s.middle.next.Data = " + d.middle.next.Data);
-            System.Console.WriteLine("s.middle.previous.Data = " + d.middle.previous.Data);
-            System.Console.WriteLine("s.descending = " + d.descending);
-
-            d.InsertInOrder(9);
-            d.Display();
-            System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
-            // d.InsertInOrder(3);
+            // IList d = new(1);
+            // for (int i = 2; i <= 4; i++)
+            // {
+            //     d.InsertInOrder(i);
+            // }
             // d.Display();
             // System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
-            d.InsertInOrder(-9);
-            d.Display();
-            System.Console.WriteLine("s.GetMiddle() = " + d.GetMiddle());
-            System.Console.WriteLine("s.middle.next.Data = " + d.middle.next.Data);
-            System.Console.WriteLine("s.middle.previous.Data = " + d.middle.previous.Data);
-            System.Console.WriteLine("s.descending = " + d.descending);
+            // System.Console.WriteLine("d.descending = " + d.descending);
+
+            // System.Console.WriteLine();
+            // for (int i = 0; i < 1; i++)
+            // {
+            //     d.InsertInOrder((d.FindLast() + 1) * (int)Math.Pow(-1,i));      //THIS CAN BE A TEST FOR MIDDLE.
+            //     d.Display();
+            //     System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
+            // }
+            // d.InsertInOrder(7);
+            // d.Display();
+            // System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
+
+            // System.Console.WriteLine();
+
+            // d.Invert();
+            // d.Display("inverts.");
+            // System.Console.WriteLine("s.GetMiddle() = " + d.GetMiddle());
+            // System.Console.WriteLine("s.middle.next.Data = " + d.middle.next.Data);
+            // System.Console.WriteLine("s.middle.previous.Data = " + d.middle.previous.Data);
+            // System.Console.WriteLine("s.descending = " + d.descending);
+
+            // d.InsertInOrder(9);
+            // d.Display();
+            // System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
+            // // d.InsertInOrder(3);
+            // // d.Display();
+            // // System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
+            // d.InsertInOrder(-9);
+            // d.Display();
+            // System.Console.WriteLine("s.GetMiddle() = " + d.GetMiddle());
+            // System.Console.WriteLine("s.middle.next.Data = " + d.middle.next.Data);
+            // System.Console.WriteLine("s.middle.previous.Data = " + d.middle.previous.Data);
+            // System.Console.WriteLine("s.descending = " + d.descending);
+
+            // System.Console.WriteLine();
+
+            // d.Invert();
+            // d.Display("reverts.");
+            // System.Console.WriteLine("s.GetMiddle() = " + d.GetMiddle());
+            // System.Console.WriteLine("s.middle.next.Data = " + d.middle.next.Data);
+            // System.Console.WriteLine("s.middle.previous.Data = " + d.middle.previous.Data);
+            // System.Console.WriteLine("s.descending = " + d.descending);
+
+            // d.InsertInOrder(100);
+            // d.Display();
+            // System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
+            // d.InsertInOrder(200);
+            // d.Display();
+            // System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
+            // d.InsertInOrder(-100);
+            // d.Display();
+            // System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
+            // d.InsertInOrder(-200);
+            // d.Display();
+            // System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
+
+
+
+
+            // MERGE TEST - MERGE TEST - MERGE TEST - MERGE TEST - MERGE TEST - MERGE TEST - MERGE TEST - MERGE TEST
+            IList f = new(2);
+            for (int i = 5; i <= 9; i++)
+            {
+                f.InsertInOrder(i*2);
+            }
+            f.Display();
+            System.Console.WriteLine("f.GetMiddle() = " + f.GetMiddle());
+            System.Console.WriteLine("f.descending = " + f.descending);
+            System.Console.WriteLine("f.Size() = " + f.Size());
+            
+
+            System.Console.WriteLine();
+            System.Console.WriteLine();
+
+            IList g = new(1);
+            for (int i = -5; i <= 1; i++)
+            {
+                g.InsertInOrder(i*3);
+                // g.Display();
+                // System.Console.WriteLine("g.GetMiddle() = " + g.GetMiddle());
+                // if (g.middle.previous != null)
+                // {
+                //     System.Console.WriteLine("g.middle.previous.Data = " + g.middle.previous.Data);    
+                // }
+                // if (g.middle.next != null)
+                // {
+                //     System.Console.WriteLine("g.middle.next.Data = " + g.middle.next.Data);    
+                // }
+                // System.Console.WriteLine();
+            }
+            g.Display();
+            System.Console.WriteLine("g.GetMiddle() = " + g.GetMiddle());
+            System.Console.WriteLine("g.descending = " + g.descending);
+            System.Console.WriteLine("g.Size() = " + g.Size());
 
             System.Console.WriteLine();
 
-            d.Invert();
-            d.Display("reverts.");
-            System.Console.WriteLine("s.GetMiddle() = " + d.GetMiddle());
-            System.Console.WriteLine("s.middle.next.Data = " + d.middle.next.Data);
-            System.Console.WriteLine("s.middle.previous.Data = " + d.middle.previous.Data);
-            System.Console.WriteLine("s.descending = " + d.descending);
+            f.MergeSorted(f,g,IList.SortDirection.Desc);
+            f.Display();
+            System.Console.WriteLine("f.GetMiddle() = " + f.GetMiddle());
+            System.Console.WriteLine("f.descending = " + f.descending);
+            System.Console.WriteLine("f.Size() = " + f.Size());
 
-            d.InsertInOrder(100);
-            d.Display();
-            System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
-            d.InsertInOrder(200);
-            d.Display();
-            System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
-            d.InsertInOrder(-100);
-            d.Display();
-            System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
-            d.InsertInOrder(-200);
-            d.Display();
-            System.Console.WriteLine("d.GetMiddle() = " + d.GetMiddle());
-
-
+            System.Console.WriteLine();
         }
     }
 }

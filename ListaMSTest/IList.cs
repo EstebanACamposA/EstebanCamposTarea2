@@ -7,7 +7,7 @@ namespace DataStructures
     {
         public class IList
         {
-            enum SortDirection : int
+            public enum SortDirection : int
             {
                 Asc = 1,
                 Desc = 2,
@@ -150,6 +150,18 @@ namespace DataStructures
                 node.next = nodeAtAndPrevious[1];
                 nodeAtAndPrevious[1].previous = node;
                 len ++;
+                
+                if (nodeAtAndPrevious[0] != null) //i.e. pos > 0.
+                {
+                    nodeAtAndPrevious[0].next = node;
+                    node.previous = nodeAtAndPrevious[0];
+                }
+                else
+                {
+                    // System.Console.WriteLine("ENTRO AQUI POS == 0 EN AddNodeAt.");
+                    first = node;    
+                }
+                
                 if ((node.Data <= middle.Data) ^ descending)
                     {
                         if (len % 2 == 1)
@@ -165,15 +177,7 @@ namespace DataStructures
                         }
                     }
 
-                if (nodeAtAndPrevious[0] != null) //i.e. pos > 0.
-                {
-                    nodeAtAndPrevious[0].next = node;
-                    node.previous = nodeAtAndPrevious[0];
-                    return;
-                }
-                // System.Console.WriteLine("ENTRO AQUI POS == 0 EN AddNodeAt.");
-                first = node;
- 
+
             }
 
             public void AddAt(int data, int pos)
@@ -359,10 +363,25 @@ namespace DataStructures
                 descending ^= true;
             }
 
-            // public void MergeSorted(IList listA, IList listB, SortDirection direction)
-            // {
-
-            // }
+            public void MergeSorted(IList listA, IList listB, SortDirection direction)
+            {
+                SortDirection listA_direction = SortDirection.Asc;
+                if (listA.descending)
+                {
+                    listA_direction = SortDirection.Desc;
+                }
+                if (listA_direction != direction)
+                {
+                    listA.Invert();
+                }
+                
+                int listB_size = listB.Size();
+                for (int i = 0; i < listB_size; i++)
+                {
+                    listA.InsertInOrder(listB.FindAt(i));
+                    // listA.Display();
+                }
+            }
 
         }
     }

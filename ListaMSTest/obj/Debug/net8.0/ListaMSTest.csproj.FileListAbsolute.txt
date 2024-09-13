@@ -12,3 +12,4 @@ C:\Users\esteb\OneDrive\Documents\D temp\D\TEC\2024\Semestre 2\AyEdDI2\Tareas Da
 C:\Users\esteb\OneDrive\Documents\D temp\D\TEC\2024\Semestre 2\AyEdDI2\Tareas DatosI\EstebanCamposDatos1Tarea2\ListaMSTest\obj\Debug\net8.0\ListaMSTest.pdb
 C:\Users\esteb\OneDrive\Documents\D temp\D\TEC\2024\Semestre 2\AyEdDI2\Tareas DatosI\EstebanCamposDatos1Tarea2\ListaMSTest\obj\Debug\net8.0\ListaMSTest.genruntimeconfig.cache
 C:\Users\esteb\OneDrive\Documents\D temp\D\TEC\2024\Semestre 2\AyEdDI2\Tareas DatosI\EstebanCamposDatos1Tarea2\ListaMSTest\obj\Debug\net8.0\ref\ListaMSTest.dll
+C:\Users\esteb\OneDrive\Documents\D temp\D\TEC\2024\Semestre 2\AyEdDI2\Tareas DatosI\EstebanCamposDatos1Tarea2\ListaMSTest\obj\Debug\net8.0\ListaMSTest.sourcelink.json
