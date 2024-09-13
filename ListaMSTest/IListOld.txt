@@ -1,0 +1,83 @@
+using DataStructures.Nodes;
+
+namespace DataStructures
+{
+    namespace Lists
+    {
+        public class IList : LinkedList<int>
+        {
+            public NodeLinkedList<int> middle = new();
+
+            public IList(int data)
+            {
+                first = new();
+                First.Data = data;
+                len = 1;
+            }
+
+
+
+            public void InsertInOrder(int value)
+            {
+                InsertInOrderAux(value, first, 0);
+            }
+            private void InsertInOrderAux(int value, NodeLinkedList<int> first, int i)
+            {
+                if (first == null)
+                {
+                    Add(value);
+                    return;
+                }
+                if (value < first.Data)
+                {
+                    AddAt(value, i);
+                    return;
+                }
+                InsertInOrderAux(value, first.Next, i+1);
+            }
+
+            public int DeleteFirst()
+            {
+                if (len == 0)
+                {
+                    System.Console.WriteLine("Error DeleteFirst on empty list!");
+                    return -1;  // -1 is a possible value and can't be taken as an error.
+                }
+                int result = first.Data;
+                DeleteAt(0);
+                return result;
+            }
+ 
+            /// <summary>
+            /// Deletes last element and returns its value.
+            /// </summary>
+            public int DeleteLast()
+            {
+                if (len == 0)
+                {
+                    System.Console.WriteLine("Error DeleteLast on empty list!");
+                    return -1;  // -1 is a possible value and can't be taken as an error.
+                }
+                int result = FindLast();
+                Delete();
+                return result;
+            }
+            // public bool DeleteValue(int value)
+            // {
+            //     if (len == 0)
+            //     {
+            //         // System.Console.WriteLine("Value not found.");
+            //         return false;  // -1 is a possible value and can't be taken as an error.
+            //     }
+            //     return DeleteValueAux(value, first, 0);
+            // }
+            // private bool DeleteValueAux(int value, NodeLinkedList<int> first, int i)
+            // {
+
+            // }
+
+            
+
+        }
+    }
+}
